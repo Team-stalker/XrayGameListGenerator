@@ -39,10 +39,10 @@ namespace XrayGameListGenerator
                     string url = baseUrl + relativePath.Replace("\\", "/");
 
                     writer.WriteLine("[file_" + i + "]");
-                    writer.WriteLine("path=" + textBoxPathMods.Text + relativePath);
-                    writer.WriteLine("url=" + url);
-                    writer.WriteLine("size=" + size);
-                    writer.WriteLine("crc32=" + crc32);
+                    writer.WriteLine("path = " + textBoxPathMods.Text + relativePath);
+                    writer.WriteLine("url = " + url);
+                    writer.WriteLine("size = " + size);
+                    writer.WriteLine("crc32 = " + crc32);
                     writer.WriteLine();
                 }
             }
@@ -75,7 +75,7 @@ namespace XrayGameListGenerator
                 StringBuilder sb = new StringBuilder();
                 foreach (byte b in hash)
                 {
-                    sb.Append(b.ToString("x2"));
+                    sb.Append(b.ToString("X2"));
                 }
                 return sb.ToString();
             }
